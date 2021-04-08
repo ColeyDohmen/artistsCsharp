@@ -30,6 +30,19 @@ namespace artists.Controllers
                 return BadRequest(err.Message);
             }
         }
+        [HttpPost]
+        public ActionResult<Artist> Create([FromBody] Artist newArtist)
+        {
+            try
+            {
+                return Ok(_service.Create(newArtist));
+            }
+            catch (System.Exception err)
+            {
+
+                return BadRequest(err.Message);
+            }
+        }
 
     }
 }

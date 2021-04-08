@@ -18,5 +18,10 @@ namespace artists.Services
         {
             return _repo.Get();
         }
+
+        internal Artist Create(Artist newArtist)
+        {
+            return _repo.Create(newArtist);
+        }
     }
 }
