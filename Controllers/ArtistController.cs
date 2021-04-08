@@ -7,7 +7,7 @@ namespace artists.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ArtistController
+    public class ArtistController : ControllerBase
     {
 
         private readonly ArtistService _service;
